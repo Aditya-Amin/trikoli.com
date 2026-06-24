@@ -1,11 +1,9 @@
 <?php
-define( 'WP_CACHE', true );
-
 /**
  * The base configuration for WordPress
  *
  * The wp-config.php creation script uses this file during the installation.
- * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * You don't have to use the website, you can copy this file to "wp-config.php"
  * and fill in the values.
  *
  * This file contains the following configurations:
@@ -13,29 +11,28 @@ define( 'WP_CACHE', true );
  * * Database settings
  * * Secret keys
  * * Database table prefix
- * * Localized language
  * * ABSPATH
  *
- * @link https://wordpress.org/support/article/editing-wp-config-php/
+ * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/
  *
  * @package WordPress
  */
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'u692832447_75wW2' );
+define( 'DB_NAME', 'trikoli_db' );
 
 /** Database username */
-define( 'DB_USER', 'u692832447_EuZhD' );
+define( 'DB_USER', 'root' );
 
 /** Database password */
-define( 'DB_PASSWORD', '9OiwcL7sd0' );
+define( 'DB_PASSWORD', '' );
 
 /** Database hostname */
-define( 'DB_HOST', '127.0.0.1' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
@@ -51,16 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',          'alwK9~F|LL-FPgX590kTnR%tY[O+bcb%[CS?q5eQK,%r8X;O=K6h0Je@)y%LUFim' );
-define( 'SECURE_AUTH_KEY',   ',pZ)z=~Y`G.NoKjBdLZPfoS[*{M)P|ASnpg/=v0-b`9uW3Qrn/}wNaZL{K@l)R#q' );
-define( 'LOGGED_IN_KEY',     'b2gPb@UEd=#0JMIN)`JeQX-@MZ(%^KHre}7.Q.cuU|z&3Lf;rg$-$+=0z{A!sD@T' );
-define( 'NONCE_KEY',         ')kf|KSZV|,M9J&>sIV])d,8d]wz,Luy7D_@sw0m,wDsM{xeB2uK7qzwwA*p}$!/8' );
-define( 'AUTH_SALT',         '7;JIzhYKYO,bVIl6I!1,z(PBIBKGHPG>)USy>7N^o4AU!LyT`~vtLmY4P*A~zkRB' );
-define( 'SECURE_AUTH_SALT',  'x=A!0L_.|I*ABo`RtS#BbyN1oaLujj]1VN%_Pziql)Tk^E1K8+$(`o)h963%xK:=' );
-define( 'LOGGED_IN_SALT',    'b^rthP`dJJWT swriT?2*khlY|UI_~M{i<F!c_vkw]#iWZwywb~KY$]2ifV7yT[}' );
-define( 'NONCE_SALT',        'sal~5p&jm,TrFB_Y0]_Gi-@iZNI<Ohc~~yVsws~tC^G~,dUpAm@.d^]p{^t#MnLQ' );
-define( 'WP_CACHE_KEY_SALT', 'Qi0KarhlOU7tQDhVTZZSrGw=m!Z#gVxiiM[:XCp?Oh<?1HJ4U_>XciqT^8N0n7x0' );
-
+define( 'AUTH_KEY',         '8o@~Q0U@Q8zPJf:,}Ot:G``>t/u@.!e99+^aO{bV]8o!fK.-|8e!z+b?lwRp8!cC' );
+define( 'SECURE_AUTH_KEY',  'J9,i|ik7m).A:~&*G`(Tr15G`w7.8F isfGa/BC|)GJ/EcNx[:J`THzWQ[={fLm2' );
+define( 'LOGGED_IN_KEY',    '/_2tA+~P&mbP?OWW^?7~vl)iYm:s=Z771YocU};0qTm&KE{O)#u%|~Rz7C4x?.mp' );
+define( 'NONCE_KEY',        '(%*Ji{eW]|ncSAE>&p4A{6nJwH?n!Mckhw)EnN$Pnx|wc$pQun@t:trk,mhHjgBZ' );
+define( 'AUTH_SALT',        ';;|E&0:!F;P9Hzcw#`S<H[I|d5^.fMMI2bp]sr#NZ]U!%9#HZoPNFh:pN>N>R`kI' );
+define( 'SECURE_AUTH_SALT', '?F4m=NA;!d&!RQY/4^**>y+V!%9#OOLrdnIq<N4$$WcfopX1:a%hZYX4#sj_CK*,' );
+define( 'LOGGED_IN_SALT',   '&>YnzH%*{)Hs_!1fIcWg;m:#[;<-4jOXD^[&=%brn+Exi);Z0YxA?^p)9V^ tZn9' );
+define( 'NONCE_SALT',       'B2K UN(i`p3 ?aDk>.MZ%L.QjJ-duuZZD<7z%NEx6[xn<6H{$z6$>-%@9si?BiPb' );
 
 /**#@-*/
 
@@ -69,13 +64,14 @@ define( 'WP_CACHE_KEY_SALT', 'Qi0KarhlOU7tQDhVTZZSrGw=m!Z#gVxiiM[:XCp?Oh<?1HJ4U_
  *
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
+ *
+ * At the installation time, database tables are created with the specified prefix.
+ * Changing this value after WordPress is installed will make your site think
+ * it has not been installed.
+ *
+ * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#table-prefix
  */
 $table_prefix = 'wp_';
-
-
-/* Add any custom values between this line and the "stop editing" line. */
-
-
 
 /**
  * For developers: WordPress debugging mode.
@@ -87,15 +83,14 @@ $table_prefix = 'wp_';
  * For information on other constants that can be used for debugging,
  * visit the documentation.
  *
- * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', false );
-}
+define( 'WP_DEBUG', false );
 
-define( 'FS_METHOD', 'direct' );
-define( 'COOKIEHASH', '1d441565fb01372e057ce7b6783be6f7' );
-define( 'WP_AUTO_UPDATE_CORE', 'minor' );
+/* Add any custom values between this line and the "stop editing" line. */
+
+
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */

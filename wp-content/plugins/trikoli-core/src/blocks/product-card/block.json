@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/product-card",
+  "version": "1.0.0",
+  "title": "Product Card",
+  "category": "trikoli",
+  "parent": [ "trikoli/product-grid" ],
+  "icon": "archive",
+  "description": "A product / portfolio card with image, category, title, description and link.",
+  "keywords": [ "product", "portfolio", "card", "work" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "html": false, "reusable": false },
+  "attributes": {
+    "imageUrl": { "type": "string", "default": "" },
+    "imageId": { "type": "number" },
+    "imageAlt": { "type": "string", "default": "" },
+    "category": { "type": "string", "default": "" },
+    "title": { "type": "string", "default": "" },
+    "description": { "type": "string", "default": "" },
+    "linkText": { "type": "string", "default": "Request a demo" },
+    "linkUrl": { "type": "string", "default": "#" }
+  },
+  "editorScript": "file:./index.js"
+}

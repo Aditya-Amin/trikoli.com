@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/feature-grid",
+  "version": "1.0.0",
+  "title": "Feature Grid",
+  "category": "trikoli-sections",
+  "icon": "grid-view",
+  "description": "A responsive grid of feature cards. Set the number of columns; drop Feature Card blocks inside.",
+  "keywords": [ "grid", "features", "services", "cards", "columns" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "wide", "full" ], "spacing": { "padding": true, "margin": true, "blockGap": true } },
+  "attributes": { "columns": { "type": "number", "default": 3 } },
+  "providesContext": { "trikoli/columns": "columns" },
+  "editorScript": "file:./index.js"
+}

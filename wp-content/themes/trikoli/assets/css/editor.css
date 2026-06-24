@@ -1,0 +1,9 @@
+/* Editor-only finishing touches for Trikoli. theme.json drives the rest. */
+.editor-styles-wrapper .tk-eyebrow {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .8125rem;
+  color: var(--wp--preset--color--primary);
+}

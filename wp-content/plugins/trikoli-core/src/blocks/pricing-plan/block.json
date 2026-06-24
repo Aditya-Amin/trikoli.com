@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/pricing-plan",
+  "version": "1.0.0",
+  "title": "Pricing Plan",
+  "category": "trikoli",
+  "parent": [ "trikoli/pricing" ],
+  "icon": "money-alt",
+  "description": "A single pricing plan card.",
+  "keywords": [ "pricing", "plan", "tier" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "html": false, "reusable": false },
+  "attributes": {
+    "name": { "type": "string", "default": "Starter" },
+    "badge": { "type": "string", "default": "" },
+    "price": { "type": "string", "default": "$1,900" },
+    "period": { "type": "string", "default": "/ month" },
+    "description": { "type": "string", "default": "" },
+    "features": { "type": "string", "default": "" },
+    "buttonText": { "type": "string", "default": "Get Started" },
+    "buttonUrl": { "type": "string", "default": "#contact" },
+    "featured": { "type": "boolean", "default": false }
+  },
+  "editorScript": "file:./index.js"
+}

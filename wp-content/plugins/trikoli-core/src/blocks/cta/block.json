@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/cta",
+  "version": "1.0.0",
+  "title": "Call To Action",
+  "category": "trikoli-sections",
+  "icon": "megaphone",
+  "description": "A bold call-to-action band with a title, supporting text and a button.",
+  "keywords": [ "cta", "call to action", "banner", "convert" ],
+  "textdomain": "trikoli",
+  "supports": {
+    "anchor": true,
+    "align": [ "wide", "full" ],
+    "color": { "background": true, "gradients": true, "text": true },
+    "spacing": { "padding": true, "margin": true }
+  },
+  "attributes": {
+    "title": { "type": "string", "default": "Let’s start your project" },
+    "text": { "type": "string", "default": "" },
+    "buttonText": { "type": "string", "default": "Get in touch" },
+    "buttonUrl": { "type": "string", "default": "#contact" }
+  },
+  "editorScript": "file:./index.js"
+}

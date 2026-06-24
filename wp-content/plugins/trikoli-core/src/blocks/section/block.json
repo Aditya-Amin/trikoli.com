@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/section",
+  "version": "1.0.0",
+  "title": "Section",
+  "category": "trikoli-sections",
+  "icon": "editor-table",
+  "description": "A flexible section wrapper — drop any blocks inside. Choose plain or a boxed card style with reveal-on-scroll.",
+  "keywords": [ "section", "container", "row", "wrapper", "group" ],
+  "textdomain": "trikoli",
+  "supports": {
+    "anchor": true,
+    "align": [ "wide", "full" ],
+    "html": false,
+    "color": { "background": true, "gradients": true, "text": true, "link": true },
+    "spacing": { "padding": true, "margin": true, "blockGap": true },
+    "border": { "color": true, "radius": true, "style": true, "width": true },
+    "layout": true
+  },
+  "attributes": {
+    "variant": { "type": "string", "default": "plain" },
+    "reveal": { "type": "boolean", "default": false }
+  },
+  "editorScript": "file:./index.js"
+}

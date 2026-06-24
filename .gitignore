@@ -1,0 +1,55 @@
+# WordPress core config & secrets
+wp-config.php
+.htaccess
+.htaccess.bk
+.private/
+
+# Uploads & generated media
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/cache/
+wp-content/wflogs/
+wp-content/backup*/
+wp-content/blogs.dir/
+wp-content/uploads-webpc/
+wp-content/ai1wm-backups/
+
+# Drop-ins (often environment-specific)
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+wp-content/db.php
+
+# Logs
+*.log
+debug.log
+wp-content/debug.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Dependencies & build (themes/plugins)
+node_modules/
+vendor/
+*.map
+
+# Environment
+.env
+.env.*
+
+# Archives & temp
+*.zip
+*.tar.gz
+*.bak
+*.tmp
+*~

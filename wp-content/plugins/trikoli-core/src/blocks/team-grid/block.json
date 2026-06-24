@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/team-grid",
+  "version": "1.0.0",
+  "title": "Team Grid",
+  "category": "trikoli-sections",
+  "icon": "groups",
+  "description": "A responsive grid of team member cards.",
+  "keywords": [ "team", "people", "members", "grid", "staff" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "wide", "full" ], "spacing": { "padding": true, "margin": true, "blockGap": true } },
+  "attributes": { "columns": { "type": "number", "default": 4 } },
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/pricing",
+  "version": "1.0.0",
+  "title": "Pricing",
+  "category": "trikoli-sections",
+  "icon": "money-alt",
+  "description": "A row of pricing plans.",
+  "keywords": [ "pricing", "plans", "packages", "tiers" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "wide" ], "spacing": { "padding": true, "margin": true, "blockGap": true } },
+  "attributes": { "columns": { "type": "number", "default": 2 } },
+  "editorScript": "file:./index.js"
+}

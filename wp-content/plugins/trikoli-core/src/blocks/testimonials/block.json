@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/testimonials",
+  "version": "1.0.0",
+  "title": "Testimonials",
+  "category": "trikoli-sections",
+  "icon": "format-quote",
+  "description": "A grid of customer testimonials.",
+  "keywords": [ "testimonials", "reviews", "quotes", "social proof" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "wide", "full" ], "spacing": { "padding": true, "margin": true, "blockGap": true } },
+  "attributes": { "columns": { "type": "number", "default": 3 } },
+  "editorScript": "file:./index.js"
+}

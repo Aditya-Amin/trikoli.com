@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/hero",
+  "version": "1.0.0",
+  "title": "Hero",
+  "category": "trikoli-sections",
+  "icon": "cover-image",
+  "description": "A hero / banner with eyebrow, title, description, two buttons and an optional image.",
+  "keywords": [ "hero", "banner", "header", "intro", "jumbotron" ],
+  "textdomain": "trikoli",
+  "supports": {
+    "anchor": true,
+    "align": [ "full" ],
+    "color": { "background": true, "gradients": true, "text": true },
+    "spacing": { "padding": true, "margin": true }
+  },
+  "attributes": {
+    "layout": { "type": "string", "default": "center" },
+    "eyebrow": { "type": "string", "default": "" },
+    "title": { "type": "string", "default": "" },
+    "description": { "type": "string", "default": "" },
+    "primaryText": { "type": "string", "default": "Get Started" },
+    "primaryUrl": { "type": "string", "default": "#" },
+    "secondaryText": { "type": "string", "default": "" },
+    "secondaryUrl": { "type": "string", "default": "#" },
+    "imageUrl": { "type": "string", "default": "" },
+    "imageId": { "type": "number" },
+    "imageAlt": { "type": "string", "default": "" }
+  },
+  "editorScript": "file:./index.js"
+}

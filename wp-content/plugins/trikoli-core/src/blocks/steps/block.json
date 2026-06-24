@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/steps",
+  "version": "1.0.0",
+  "title": "Process Steps",
+  "category": "trikoli-sections",
+  "icon": "list-view",
+  "description": "A numbered list of process / workflow steps.",
+  "keywords": [ "process", "steps", "timeline", "workflow", "how it works" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "wide" ], "spacing": { "padding": true, "margin": true, "blockGap": true } },
+  "attributes": {},
+  "editorScript": "file:./index.js"
+}

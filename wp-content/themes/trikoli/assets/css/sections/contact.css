@@ -1,0 +1,6 @@
+/* === Trikoli: Contact section === */
+.wp-block-html .wpr-contact-area { width: 100%; }
+.wp-block-html .wpr-get-in-touch { width: 100%; }
+/* Ensure contact form inputs inherit font */
+.wp-block-html .contact-form-area input,
+.wp-block-html .contact-form-area textarea { font-family: inherit; }

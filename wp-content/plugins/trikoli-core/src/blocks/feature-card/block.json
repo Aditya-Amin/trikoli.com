@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/feature-card",
+  "version": "1.0.0",
+  "title": "Feature Card",
+  "category": "trikoli",
+  "parent": [ "trikoli/feature-grid" ],
+  "icon": "id",
+  "description": "An icon, title, description, bullet list and a link — the building block of services / features.",
+  "keywords": [ "card", "feature", "service", "pillar" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "html": false, "reusable": false },
+  "attributes": {
+    "icon": { "type": "string", "default": "☁" },
+    "pill": { "type": "string", "default": "" },
+    "title": { "type": "string", "default": "" },
+    "description": { "type": "string", "default": "" },
+    "items": { "type": "string", "default": "" },
+    "linkText": { "type": "string", "default": "Learn more" },
+    "linkUrl": { "type": "string", "default": "#" }
+  },
+  "editorScript": "file:./index.js"
+}

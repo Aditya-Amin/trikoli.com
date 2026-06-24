@@ -1,0 +1,84 @@
+/* === Trikoli: Breadcrumb / page-banner — native block overrides ===
+   Mirrors agenio `.wpr-banner-area.breadcrumb` from style_5aceec58.css.
+   trikoli-overrides.css resets every .wp-block-group (padding/margin/
+   border/max-width) so the structural boxes below must be re-applied
+   with !important. Non-group elements (.section-title, .desc, .bg-shape,
+   .banner-shape-area) inherit agenio styling natively. */
+
+/* ── Banner shell ───────────────────────────────────────────── */
+.wpr-banner-area.breadcrumb {
+    position: relative !important;
+    z-index: 0 !important;
+    margin: 0 0 16px !important;
+    border-width: 1px 0 !important;
+    border-style: solid !important;
+    border-color: rgba(3, 7, 18, 0.1) !important;
+}
+.wpr-banner-area.breadcrumb .banner-content-area {
+    height: auto !important;
+    padding: 100px 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
+    border-width: 0 1px !important;
+    border-style: solid !important;
+    border-color: rgba(3, 7, 18, 0.1) !important;
+    overflow: hidden !important;
+}
+
+/* ── Title (dynamic post-title) ─────────────────────────────── */
+.wpr-banner-area.breadcrumb .banner-content-area .section-title {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    letter-spacing: -0.06em !important;
+    margin: 0 0 20px !important;
+    background: linear-gradient(137.66deg, #55595C 21.13%, #000000 80.53%), #030712 !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* ── Description ────────────────────────────────────────────── */
+.wpr-banner-area.breadcrumb .banner-content-area .desc {
+    max-width: max-content !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    color: #030712 !important;
+}
+
+/* ── Background + corner shapes (agenio markup via wp:html) ──── */
+.wpr-banner-area.breadcrumb .banner-content-area .bg-shape {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: -2 !important;
+}
+.wpr-banner-area.breadcrumb .banner-content-area .bg-shape img {
+    width: 100% !important;
+    height: 100% !important;
+}
+.wpr-banner-area.breadcrumb .banner-content-area .banner-shape-area img {
+    position: absolute !important;
+    z-index: 1 !important;
+}
+.wpr-banner-area.breadcrumb .banner-content-area .banner-shape-area img.one { top: 0 !important; left: 0 !important; }
+.wpr-banner-area.breadcrumb .banner-content-area .banner-shape-area img.two { bottom: 0 !important; right: 0 !important; }
+
+/* ── Responsive (mirror agenio breakpoints) ─────────────────── */
+@media (max-width: 768px) {
+    .wpr-banner-area.breadcrumb .banner-content-area .banner-shape-area img.one,
+    .wpr-banner-area.breadcrumb .banner-content-area .banner-shape-area img.two { width: 150px !important; }
+    .wpr-banner-area.breadcrumb .banner-content-area .desc { max-width: 80% !important; }
+}
+@media (max-width: 576px) {
+    .wpr-banner-area.breadcrumb .banner-content-area .section-title { font-size: 32px !important; }
+    .wpr-banner-area.breadcrumb .banner-content-area .banner-shape-area img.one,
+    .wpr-banner-area.breadcrumb .banner-content-area .banner-shape-area img.two { width: 120px !important; }
+}
+@media (max-width: 450px) {
+    .wpr-banner-area.breadcrumb .banner-content-area .desc { max-width: 90% !important; }
+}

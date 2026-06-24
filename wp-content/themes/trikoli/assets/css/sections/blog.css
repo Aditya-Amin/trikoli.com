@@ -1,0 +1,103 @@
+/* === Trikoli: Blog (index / archive / single) — brand styling ===
+   The post grid is built from core query/post-template blocks. Cards,
+   gaps and meta are styled here on-brand. !important defends against the
+   global .wp-block-group reset in trikoli-overrides.css. */
+
+/* ── Post grid ──────────────────────────────────────────────── */
+.tk-blog .wp-block-post-template.tk-blog-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 32px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+@media (max-width: 991px) {
+    .tk-blog .wp-block-post-template.tk-blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+    .tk-blog .wp-block-post-template.tk-blog-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.tk-blog .tk-blog-grid > li.wp-block-post {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #fff !important;
+    border: 1px solid rgba(11, 27, 77, 0.1) !important;
+    border-radius: 18px !important;
+    padding: 24px !important;
+    margin: 0 !important;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease !important;
+}
+.tk-blog .tk-blog-grid > li.wp-block-post:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 24px 50px -24px rgba(47, 107, 224, 0.4) !important;
+    border-color: #2F6BE0 !important;
+}
+.tk-blog .tk-blog-grid .wp-block-post-featured-image {
+    margin: 0 0 20px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+}
+.tk-blog .tk-blog-grid .wp-block-post-featured-image img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+}
+
+/* ── Meta row (date · category) ─────────────────────────────── */
+.tk-blog .tk-post-meta {
+    gap: 14px !important;
+    align-items: center !important;
+    margin: 0 0 12px !important;
+}
+.tk-blog .tk-post-meta .wp-block-post-terms a,
+.tk-blog .tk-post-meta .wp-block-post-date {
+    color: #2F6BE0 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+.tk-blog .tk-post-meta .wp-block-post-date { color: #9AA3B2 !important; font-weight: 500 !important; }
+
+/* ── Title + excerpt ────────────────────────────────────────── */
+.tk-blog .tk-blog-grid .wp-block-post-title {
+    margin: 0 0 12px !important;
+    line-height: 1.25 !important;
+}
+.tk-blog .tk-blog-grid .wp-block-post-title a {
+    color: #0B1B4D !important;
+    text-decoration: none !important;
+    transition: color .25s ease !important;
+}
+.tk-blog .tk-blog-grid .wp-block-post-title a:hover { color: #2F6BE0 !important; }
+.tk-blog .tk-blog-grid .wp-block-post-excerpt {
+    margin: 0 !important;
+    color: #5B6478 !important;
+    line-height: 1.6 !important;
+}
+.tk-blog .tk-blog-grid .wp-block-post-excerpt__more-text a,
+.tk-blog .tk-blog-grid .wp-block-post-excerpt a {
+    color: #2F6BE0 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+/* ── Pagination ─────────────────────────────────────────────── */
+.tk-blog .tk-pagination {
+    margin-top: 48px !important;
+    gap: 10px !important;
+}
+.tk-blog .tk-pagination .wp-block-query-pagination-numbers,
+.tk-blog .tk-pagination a,
+.tk-blog .tk-pagination .page-numbers {
+    color: #0B1B4D !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+.tk-blog .tk-pagination .page-numbers.current { color: #2F6BE0 !important; }
+
+/* ── Single post content rhythm ─────────────────────────────── */
+.wp-block-post-content > * { margin-top: 1.2em !important; }
+.wp-block-post-content > *:first-child { margin-top: 0 !important; }

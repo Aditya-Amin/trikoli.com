@@ -1,0 +1,207 @@
+/* === Trikoli: Footer section — native block overrides === */
+
+/* Remove WP template-part wrapper padding */
+.wp-block-template-part footer { padding: 0; margin: 0; }
+.wpr-footer-area.wp-block-group { padding: 0 !important; margin: 0 !important; }
+
+/* ── Structural paddings (re-apply agenio layout) ────────────────
+   trikoli-overrides.css applies `padding/margin/gap:0 !important` to
+   EVERY .wp-block-group so raw wp:html section patterns sit edge-to-
+   edge. The footer's sub-boxes are real wp:group blocks, so that reset
+   strips the agenio paddings (.footer-top 64/56, .footer-logo-area
+   140/0, .copyright-area 24/56). Re-apply them with !important — the
+   same technique header.css uses. Values mirror style_5aceec58.css. */
+.wpr-footer-area .footer-top {
+    padding: 64px 56px !important;
+}
+.wpr-footer-area .footer-logo-area {
+    position: relative !important;
+    z-index: 1 !important;
+    text-align: center !important;
+    padding: 140px 0 !important;
+    border-width: 1px 0 !important;
+    border-style: solid !important;
+    border-color: rgba(3, 7, 18, 0.1) !important;
+}
+.wpr-footer-area .copyright-area {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 24px 56px !important;
+}
+
+/* ── Footer-top Navigation ──────────────────────────────────── */
+.wpr-footer-area .footer-top .wp-block-navigation {
+    width: 100% !important;
+}
+.wpr-footer-area .footer-top .footer-nav-list > .wp-block-navigation__container {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    list-style: none !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+.wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+}
+/* Square-dot separators between items (absolute pseudo-element in the gap) */
+.wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item:not(:last-child) {
+    margin-right: 40px !important;
+}
+.wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item:not(:last-child)::after {
+    content: "" !important;
+    position: absolute !important;
+    right: -26px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 12px !important;
+    height: 12px !important;
+    background: #D1D5DB !important;
+}
+/* Footer nav links — match agenio .wpr-footer-area .footer-top ul li a */
+.wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item__content {
+    color: var(--color-heading-1) !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    font-weight: 600 !important;
+    font-family: var(--font-primary) !important;
+    transition: var(--transition) !important;
+    position: relative !important;
+    z-index: 1 !important;
+    padding: 0 !important;
+    text-decoration: none !important;
+    display: block !important;
+}
+.wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item__content::after {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    background: var(--color-heading-1) !important;
+    height: 1px !important;
+    width: 0 !important;
+    bottom: 4px !important;
+    left: 0 !important;
+    transition: var(--transition) !important;
+}
+.wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item:hover .wp-block-navigation-item__content::after {
+    width: 100% !important;
+}
+
+/* ── Footer Logo Image ──────────────────────────────────────── */
+.wpr-footer-area .footer-logo-area .footer-logo-img {
+    margin: 0 !important;
+    text-align: center !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+.wpr-footer-area .footer-logo-area .footer-logo-img img {
+    width: auto !important;
+    max-width: 600px !important;
+    height: auto !important;
+    display: inline-block !important;
+}
+
+/* ── Copyright Area ─────────────────────────────────────────── */
+.wpr-footer-area .copyright-area .left-social-area {
+    width: 33% !important;
+}
+.wpr-footer-area .copyright-area .copyright {
+    width: 33% !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    margin-bottom: 0 !important;
+}
+.wpr-footer-area .copyright-area .is-layout-flex {
+    gap: 0 !important;
+}
+
+/* ── Social Links Navigation ────────────────────────────────── */
+.wpr-footer-area .copyright-area .social-links-nav > .wp-block-navigation__container {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+    list-style: none !important;
+    flex-wrap: wrap !important;
+}
+.wpr-footer-area .copyright-area .social-links-nav .wp-block-navigation-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.wpr-footer-area .copyright-area .social-links-nav .wp-block-navigation-item__content {
+    color: var(--color-heading-1) !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    font-weight: 600 !important;
+    font-family: var(--font-primary) !important;
+    transition: var(--transition) !important;
+    position: relative !important;
+    z-index: 1 !important;
+    padding: 0 !important;
+    text-decoration: none !important;
+    display: block !important;
+}
+.wpr-footer-area .copyright-area .social-links-nav .wp-block-navigation-item__content::after {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    background: var(--color-heading-1) !important;
+    height: 1px !important;
+    width: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    transition: var(--transition) !important;
+}
+.wpr-footer-area .copyright-area .social-links-nav .wp-block-navigation-item:hover .wp-block-navigation-item__content::after {
+    width: 100% !important;
+}
+
+/* ── Responsive adjustments ─────────────────────────────────── */
+@media only screen and (max-width: 991px) {
+    .wpr-footer-area .footer-top .footer-nav-list > .wp-block-navigation__container {
+        flex-wrap: wrap !important;
+        gap: 24px !important;
+        justify-content: center !important;
+    }
+    .wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item:not(:last-child) {
+        margin-right: 0 !important;
+    }
+    .wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item:not(:last-child)::after {
+        display: none !important;
+    }
+    .wpr-footer-area .footer-top .footer-nav-list .wp-block-navigation-item__content {
+        font-size: 16px !important;
+    }
+    .wpr-footer-area .copyright-area {
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+        text-align: center !important;
+    }
+    .wpr-footer-area .copyright-area .left-social-area,
+    .wpr-footer-area .copyright-area .copyright {
+        width: 100% !important;
+    }
+    .wpr-footer-area .copyright-area .social-links-nav > .wp-block-navigation__container {
+        justify-content: center !important;
+    }
+}
+
+/* ── Structural padding — responsive (mirror agenio breakpoints) ── */
+@media only screen and (max-width: 1200px) {
+    .wpr-footer-area .copyright-area { padding: 24px !important; }
+}
+@media only screen and (max-width: 768px) {
+    .wpr-footer-area .footer-top { padding: 50px 25px !important; }
+    .wpr-footer-area .footer-logo-area { padding: 140px 0 100px !important; }
+    .wpr-footer-area .copyright-area { flex-wrap: wrap !important; gap: 30px !important; padding: 24px !important; }
+}
+@media only screen and (max-width: 450px) {
+    .wpr-footer-area .copyright-area { justify-content: center !important; }
+}

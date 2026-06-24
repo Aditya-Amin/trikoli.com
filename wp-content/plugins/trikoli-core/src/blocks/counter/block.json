@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/counter",
+  "version": "1.0.0",
+  "title": "Counter",
+  "category": "trikoli",
+  "icon": "chart-bar",
+  "description": "An animated number that counts up on scroll, with prefix/suffix and a label. Great inside Columns or a Feature Grid.",
+  "keywords": [ "counter", "stat", "number", "odometer", "metric" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "html": false, "spacing": { "padding": true, "margin": true } },
+  "attributes": {
+    "number": { "type": "string", "default": "99" },
+    "prefix": { "type": "string", "default": "" },
+    "suffix": { "type": "string", "default": "%" },
+    "label": { "type": "string", "default": "Label" }
+  },
+  "editorScript": "file:./index.js"
+}

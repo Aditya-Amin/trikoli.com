@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/marquee",
+  "version": "1.0.0",
+  "title": "Marquee",
+  "category": "trikoli-sections",
+  "icon": "controls-repeat",
+  "description": "A continuously scrolling text marquee.",
+  "keywords": [ "marquee", "scrolling", "ticker", "slider" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "full" ], "color": { "background": true, "text": true }, "spacing": { "padding": true, "margin": true } },
+  "attributes": {
+    "text": { "type": "string", "default": "Innovative ✦ Visionary ✦ Reliable ✦ Scalable" },
+    "speed": { "type": "number", "default": 24 },
+    "reverse": { "type": "boolean", "default": false }
+  },
+  "editorScript": "file:./index.js"
+}

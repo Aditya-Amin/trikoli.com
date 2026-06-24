@@ -1,0 +1,4 @@
+/* === Trikoli: Testimonials / Swiper section === */
+.wp-block-html .wpr-testimonials-area { width: 100%; }
+.wp-block-html .wpr-testimonials-area .swiper { overflow: hidden; }
+.wp-block-html .wpr-testimonials-area .swiper-slide { height: auto; }

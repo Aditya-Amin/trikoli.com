@@ -1,0 +1,4 @@
+/* === Trikoli: Projects / Swiper section === */
+.wp-block-html .wpr-project-area { width: 100%; }
+.wp-block-html .wpr-project-area .swiper { overflow: hidden; }
+.wp-block-html .wpr-project-area .swiper-slide { height: auto; }

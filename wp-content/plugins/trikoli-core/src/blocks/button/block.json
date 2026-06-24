@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/button",
+  "version": "1.0.0",
+  "title": "Button",
+  "category": "trikoli",
+  "icon": "button",
+  "description": "A brand button with primary / outline / white styles, sizes and an optional arrow icon.",
+  "keywords": [ "button", "cta", "link" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "html": false, "spacing": { "margin": true } },
+  "attributes": {
+    "text": { "type": "string", "default": "Get Started" },
+    "url": { "type": "string", "default": "#" },
+    "style": { "type": "string", "default": "primary" },
+    "size": { "type": "string", "default": "md" },
+    "icon": { "type": "boolean", "default": false },
+    "newTab": { "type": "boolean", "default": false }
+  },
+  "editorScript": "file:./index.js"
+}

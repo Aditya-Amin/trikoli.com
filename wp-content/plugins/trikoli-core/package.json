@@ -1,0 +1,20 @@
+{
+  "name": "trikoli-core",
+  "version": "1.0.0",
+  "description": "Trikoli Core — namespaced Gutenberg blocks, patterns and section/header/footer widgets.",
+  "author": "Trikoli",
+  "license": "GPL-2.0-or-later",
+  "private": true,
+  "scripts": {
+    "build": "wp-scripts build && npm run build:manifest",
+    "build:manifest": "wp-scripts build-blocks-manifest --input=build --output=build/blocks-manifest.php",
+    "start": "wp-scripts start",
+    "format": "wp-scripts format",
+    "lint:js": "wp-scripts lint-js",
+    "lint:css": "wp-scripts lint-style",
+    "packages-update": "wp-scripts packages-update"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.0.0"
+  }
+}

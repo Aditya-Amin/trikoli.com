@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/faq",
+  "version": "1.0.0",
+  "title": "FAQ",
+  "category": "trikoli-sections",
+  "icon": "editor-help",
+  "description": "An accordion of questions and answers. Drop FAQ Item blocks inside.",
+  "keywords": [ "faq", "accordion", "questions", "toggle" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "wide" ], "spacing": { "padding": true, "margin": true } },
+  "attributes": { "single": { "type": "boolean", "default": true } },
+  "editorScript": "file:./index.js"
+}

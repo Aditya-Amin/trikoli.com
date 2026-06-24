@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Magazine",
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "primary", "color": "#E11D48", "name": "Primary" },
+        { "slug": "primary-dark", "color": "#9F1239", "name": "Primary Dark" },
+        { "slug": "primary-light", "color": "#FB7185", "name": "Primary Light" },
+        { "slug": "navy", "color": "#111827", "name": "Ink" },
+        { "slug": "heading", "color": "#111827", "name": "Heading" },
+        { "slug": "body", "color": "#374151", "name": "Body Text" },
+        { "slug": "muted", "color": "#6B7280", "name": "Muted" },
+        { "slug": "light", "color": "#FFF1F2", "name": "Light" },
+        { "slug": "surface", "color": "#FFE4E6", "name": "Surface" },
+        { "slug": "border", "color": "#F3D2D7", "name": "Border" },
+        { "slug": "white", "color": "#FFFFFF", "name": "White" },
+        { "slug": "black", "color": "#0A0A0A", "name": "Black" }
+      ]
+    }
+  },
+  "styles": {
+    "elements": {
+      "button": { "border": { "radius": "6px" } }
+    }
+  }
+}

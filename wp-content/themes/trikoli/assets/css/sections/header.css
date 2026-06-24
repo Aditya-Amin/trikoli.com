@@ -1,0 +1,342 @@
+/* === Trikoli: Header section — native block overrides === */
+
+/* Remove WP template-part wrapper padding */
+.wp-block-template-part header { padding: 0; margin: 0; }
+
+/* ── Site Logo ──────────────────────────────────────────────── */
+.header-style-one .left-area .wp-block-site-logo {
+    margin: 0 !important;
+    line-height: 0 !important;
+    flex-shrink: 0;
+}
+.header-style-one .left-area .wp-block-site-logo a {
+    display: block;
+    line-height: 0;
+}
+.header-style-one .left-area .wp-block-site-logo img {
+    max-height: 44px !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 160px !important;
+    display: block;
+}
+
+/* ── Site Title (text fallback when no logo is uploaded) ────── */
+/* core/site-logo renders nothing when no logo is set, so the
+   site title shows automatically. Once a logo is uploaded the
+   :has(img) rule hides the title — no PHP needed. */
+.header-style-one .left-area .wp-block-site-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+.header-style-one .left-area .wp-block-site-title a {
+    color: #030712 !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    font-family: "Space Grotesk", sans-serif !important;
+    text-decoration: none !important;
+    display: block !important;
+    white-space: nowrap !important;
+}
+.header-style-one .left-area .wp-block-site-title a:hover {
+    color: #2F6BE0 !important;
+}
+/* Hide site title once a logo image is present */
+.header-style-one .left-area .wp-block-site-logo:has(img) ~ .wp-block-site-title {
+    display: none !important;
+}
+
+/* ── Wrapper area padding (override block inline padding:0 ) ── */
+/* Vendor style sets padding: 21px 67px 20px on .left-area and
+   padding: 12px 50px on .button-area-start; the block attrs
+   emit inline padding-top/bottom:0 which wins without !important */
+.header-style-one .header-style-one-wrapper .left-area {
+    padding: 21px 67px 20px !important;
+}
+.header-style-one .header-style-one-wrapper .button-area-start {
+    padding: 12px 50px !important;
+}
+
+/* ── Desktop Navigation ─────────────────────────────────────── */
+
+/* nav wrapper — takes remaining flex space */
+.header-style-one .main-nav-area {
+    flex: 1;
+}
+
+/* WP wraps the UL inside several responsive-container divs.
+   Use descendant (not direct-child >) selector so the styles reach
+   the actual <ul class="wp-block-navigation__container"> */
+.header-style-one .main-nav-area .wp-block-navigation__container {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 40px !important;
+    list-style: none !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+}
+.header-style-one .main-nav-area .wp-block-navigation-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+}
+/* Nav link — match agenio .main-nav-area ul li a */
+.header-style-one .main-nav-area .wp-block-navigation-item__content {
+    color: #030712 !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    font-family: "Space Grotesk", sans-serif !important;
+    transition: all 0.6s !important;
+    position: relative !important;
+    z-index: 1 !important;
+    padding: 0 !important;
+    text-decoration: none !important;
+    display: block !important;
+}
+.header-style-one .main-nav-area .wp-block-navigation-item__label {
+    display: inline;
+}
+/* Underline slide-in on hover — match agenio .main-nav-area ul li a::after */
+.header-style-one .main-nav-area .wp-block-navigation-item__content::after {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    background: #030712 !important;
+    height: 1px !important;
+    width: 0 !important;
+    bottom: 1px !important;
+    left: 0 !important;
+    transition: all 0.6s !important;
+}
+.header-style-one .main-nav-area .wp-block-navigation-item:hover .wp-block-navigation-item__content::after {
+    width: 100% !important;
+}
+/* Active / current-page state */
+.header-style-one .main-nav-area .current-menu-item .wp-block-navigation-item__content::after,
+.header-style-one .main-nav-area .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content::after {
+    width: 100% !important;
+}
+
+/* ── CTA Button — matches .wpr-btn.btn-primary exactly ──────── */
+.header-style-one .button-area-start .wp-block-button__link,
+.header-style-one .button-area-start .wp-block-button__link:visited {
+    color: #fff !important;
+    background: radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%),
+                linear-gradient(137.66deg, #40454A 21.13%, #292C2E 80.53%) !important;
+    box-shadow: 0px 3px 3px rgba(0,0,0,.1),
+                inset 0px 1px 0px rgba(255,255,255,.6),
+                inset 0px -3px 0px #1A1A1A,
+                inset 0px -4px 0px 1px rgba(255,255,255,.1) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 16px 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    font-family: "Space Grotesk", sans-serif !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    transition: all 0.6s !important;
+    white-space: nowrap !important;
+    position: relative !important;
+    z-index: 1 !important;
+    overflow: hidden !important;
+}
+.header-style-one .button-area-start .wp-block-button__link:hover {
+    color: #fff !important;
+    box-shadow: 0px 3px 3px rgba(0,0,0,.18),
+                inset 0px 1px 0px rgba(255,255,255,.6),
+                inset 0px -3px 0px #1A1A1A,
+                inset 0px -4px 0px 1px rgba(255,255,255,.1) !important;
+}
+/* Hide CTA button on mobile (≤768px) — matches vendor rule for .wpr-btn */
+@media (max-width: 768px) {
+    .header-style-one .button-area-start .wp-block-button__link {
+        display: none !important;
+    }
+}
+
+/* ── Mobile Hamburger Button ────────────────────────────────── */
+/* Hidden on desktop; shown on mobile via media query below */
+.header-style-one .wp-block-navigation__responsive-container-open {
+    background: radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255,255,255,.2) 0%, rgba(255,255,255,0) 100%),
+                linear-gradient(137.66deg, #40454A 21.13%, #292C2E 80.53%) !important;
+    box-shadow: 0 3px 3px rgba(0,0,0,.1),
+                inset 0 1px 0 rgba(255,255,255,.6),
+                inset 0 -3px 0 #1A1A1A,
+                inset 0 -4px 0 1px rgba(255,255,255,.1) !important;
+    border-radius: 12px !important;
+    width: 48px !important;
+    height: 48px !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    padding: 0 !important;
+}
+.header-style-one .wp-block-navigation__responsive-container-open svg {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* ── Responsive visibility ──────────────────────────────────── */
+/* WP shows the responsive-container at ≥600px by default.
+   We extend the hidden range up to our 991px breakpoint.
+   Do NOT hide it on desktop (≥992px) — that was the original bug
+   that made the entire nav disappear. */
+@media only screen and (max-width: 991px) {
+    /* Hide the nav container on mobile — hamburger handles it */
+    .header-style-one .main-nav-area .wp-block-navigation__responsive-container:not(.is-menu-open) {
+        display: none !important;
+    }
+    /* Show the hamburger button on mobile */
+    .header-style-one .wp-block-navigation__responsive-container-open {
+        display: flex !important;
+    }
+}
+
+/* ── Mobile Overlay Panel ───────────────────────────────────── */
+/* WP JS adds .is-menu-open and makes the container a fixed full-screen
+   overlay by default. Override to a dropdown anchored below the header. */
+.header-style-one .wp-block-navigation__responsive-container.is-menu-open {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    background: #fff !important;
+    z-index: 100 !important;
+    height: auto !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1) !important;
+    overflow-y: auto !important;
+    display: block !important;
+    flex-direction: unset !important;
+    padding: 0 !important;
+}
+/* Mobile nav item list */
+.header-style-one .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 40px 25px !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+.header-style-one .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+    display: block !important;
+    font-size: 16px !important;
+    font-family: "Space Grotesk", sans-serif !important;
+    color: #030712 !important;
+    padding: 12px 0 17px !important;
+    border-bottom: 1px solid #f3f3f3 !important;
+    width: 100% !important;
+    text-decoration: none !important;
+}
+/* Close button */
+.header-style-one .wp-block-navigation__responsive-container-close {
+    position: absolute !important;
+    top: 16px !important;
+    right: 16px !important;
+    background: #030712 !important;
+    color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+.header-style-one .wp-block-navigation__responsive-container-close svg {
+    fill: #fff !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+/* Hide the close button when nav is not open (desktop) */
+@media only screen and (min-width: 992px) {
+    .header-style-one .main-nav-area .wp-block-navigation__responsive-container-close {
+        display: none !important;
+    }
+}
+
+/* ── header-top: full structural override (editor + frontend) ── */
+/* Do NOT use CSS variables here — in the editor iframe (about:srcdoc,
+   origin null) WP may define --color-heading-1 as transparent/white via
+   :root :where(body) scoping, preventing even var(x, fallback) from
+   reaching the fallback. Absolute values are guaranteed. */
+.header-style-one .header-top {
+    background: #030712 !important;
+    padding: 8px 0 !important;
+}
+.header-style-one .header-top .header-top-inner {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 25px !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+.header-style-one .header-top .header-top-inner .text {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "Space Grotesk", sans-serif !important;
+}
+.header-style-one .header-top .header-top-inner .text span {
+    color: #2F6BE0 !important;
+}
+.header-style-one .header-top .header-top-inner .left-icon,
+.header-style-one .header-top .header-top-inner .right-icon {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* ── Wrapper layout: structural override ────────────────────── */
+.header-style-one .header-style-one-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    border: 1px solid rgba(3, 7, 18, 0.1) !important;
+    flex-wrap: nowrap !important;
+}
+
+/* ── Flex alignment toolbar support ────────────────────────── */
+/* WP adds is-content-justification-* classes when the toolbar
+   alignment button is clicked. Specificity here is 0,3,0 which
+   beats vendor CSS (0,2,0), so toolbar changes take effect. */
+.header-style-one .header-style-one-wrapper.is-content-justification-left         { justify-content: flex-start !important; }
+.header-style-one .header-style-one-wrapper.is-content-justification-center       { justify-content: center !important; }
+.header-style-one .header-style-one-wrapper.is-content-justification-right        { justify-content: flex-end !important; }
+.header-style-one .header-style-one-wrapper.is-content-justification-space-between{ justify-content: space-between !important; }
+
+/* same for the button-area-start flex container */
+.header-style-one .button-area-start.is-content-justification-left         { justify-content: flex-start !important; }
+.header-style-one .button-area-start.is-content-justification-center       { justify-content: center !important; }
+.header-style-one .button-area-start.is-content-justification-right        { justify-content: flex-end !important; }
+.header-style-one .button-area-start.is-content-justification-space-between{ justify-content: space-between !important; }
+
+/* Kill WP group layout gap that can split blocks */
+.header-style-one .header-style-one-wrapper.is-layout-flex {
+    gap: 0 !important;
+}
+.header-style-one .button-area-start.is-layout-flex {
+    gap: 20px !important;
+}

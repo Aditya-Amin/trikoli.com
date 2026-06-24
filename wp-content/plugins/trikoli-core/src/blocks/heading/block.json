@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/heading",
+  "version": "1.0.0",
+  "title": "Section Heading",
+  "category": "trikoli",
+  "icon": "heading",
+  "description": "An eyebrow label, a title and an optional sub-text — the standard Trikoli section header.",
+  "keywords": [ "heading", "title", "eyebrow", "subtitle" ],
+  "textdomain": "trikoli",
+  "supports": {
+    "anchor": true,
+    "align": [ "wide", "full" ],
+    "html": false,
+    "spacing": { "margin": true, "padding": true }
+  },
+  "attributes": {
+    "eyebrow": { "type": "string", "default": "" },
+    "title": { "type": "string", "default": "" },
+    "subtitle": { "type": "string", "default": "" },
+    "level": { "type": "number", "default": 2 },
+    "align": { "type": "string", "default": "left" }
+  },
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/testimonial",
+  "version": "1.0.0",
+  "title": "Testimonial",
+  "category": "trikoli",
+  "parent": [ "trikoli/testimonials" ],
+  "icon": "format-quote",
+  "description": "A single quote with author and role.",
+  "keywords": [ "testimonial", "quote", "review" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "html": false, "reusable": false },
+  "attributes": {
+    "quote": { "type": "string", "default": "" },
+    "author": { "type": "string", "default": "" },
+    "role": { "type": "string", "default": "" }
+  },
+  "editorScript": "file:./index.js"
+}

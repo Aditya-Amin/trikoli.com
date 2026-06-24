@@ -1,0 +1,9 @@
+/* Editor-only: reveal scroll-animated elements and hide the preloader so the
+   exact-design patterns/blocks are fully visible while editing. */
+.preloader { display: none !important; }
+.wow { opacity: 1 !important; visibility: visible !important; animation: none !important; transform: none !important; }
+[data-wow-delay] { animation-delay: 0s !important; }
+.tk-reveal { opacity: 1 !important; transform: none !important; }
+.wpr-marquee__viewport, .text-split, .scrollingtext-1, .scrollingtext-2 { animation: none !important; }
+#goTop, .search-input-area { display: none !important; }
+.editor-styles-wrapper { overflow-x: hidden; }

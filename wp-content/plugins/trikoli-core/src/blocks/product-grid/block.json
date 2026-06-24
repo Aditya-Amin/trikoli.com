@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/product-grid",
+  "version": "1.0.0",
+  "title": "Product Grid",
+  "category": "trikoli-sections",
+  "icon": "products",
+  "description": "A responsive grid of product / portfolio cards.",
+  "keywords": [ "products", "portfolio", "work", "grid", "showcase" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "wide", "full" ], "spacing": { "padding": true, "margin": true, "blockGap": true } },
+  "attributes": { "columns": { "type": "number", "default": 3 } },
+  "editorScript": "file:./index.js"
+}

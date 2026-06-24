@@ -1,0 +1,4 @@
+/* === Trikoli: FAQ Accordion section === */
+.wp-block-html .wpr-faq-area { width: 100%; }
+/* Ensure Bootstrap collapse works inside core/html block */
+.wp-block-html .accordion-collapse { transition: height 0.35s ease; }

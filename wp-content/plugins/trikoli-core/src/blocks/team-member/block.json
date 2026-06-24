@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/team-member",
+  "version": "1.0.0",
+  "title": "Team Member",
+  "category": "trikoli",
+  "parent": [ "trikoli/team-grid" ],
+  "icon": "admin-users",
+  "description": "A team member card: photo, name, role and social links.",
+  "keywords": [ "team", "member", "person", "author" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "html": false, "reusable": false },
+  "attributes": {
+    "imageUrl": { "type": "string", "default": "" },
+    "imageId": { "type": "number" },
+    "imageAlt": { "type": "string", "default": "" },
+    "name": { "type": "string", "default": "" },
+    "role": { "type": "string", "default": "" },
+    "linkedin": { "type": "string", "default": "" },
+    "twitter": { "type": "string", "default": "" },
+    "github": { "type": "string", "default": "" }
+  },
+  "editorScript": "file:./index.js"
+}

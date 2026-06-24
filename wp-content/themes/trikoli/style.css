@@ -1,0 +1,37 @@
+/*
+Theme Name: Trikoli
+Theme URI: https://trikoli.com
+Author: Trikoli
+Author URI: https://trikoli.com
+Description: Trikoli is a scalable, full-site-editing block theme for product companies — SaaS, digital products and IoT. Built for Gutenberg with the Trikoli Core blocks plugin. Reusable across verticals (business, WooCommerce, magazine, newspaper) via style variations and pattern categories.
+Requires at least: 6.5
+Tested up to: 6.7
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: trikoli
+Tags: full-site-editing, block-patterns, block-styles, blog, portfolio, business, custom-colors, custom-logo, editor-style, featured-images, wide-blocks, threaded-comments
+*/
+
+/*
+ * This is a block theme — most styling lives in theme.json.
+ * Light, theme-level finishing touches only below.
+ */
+
+.wp-site-blocks { overflow-x: clip; }
+
+/* Brand utility classes usable inside patterns / Additional CSS class field */
+.tk-eyebrow {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .8125rem;
+  color: var(--wp--preset--color--primary);
+}
+.tk-rounded { border-radius: var(--wp--custom--radius--lg); }
+.tk-shadow-card { box-shadow: var(--wp--preset--shadow--card); }
+
+/* Smooth anchor scrolling */
+html { scroll-behavior: smooth; }

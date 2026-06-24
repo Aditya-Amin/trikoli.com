@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "trikoli/contact",
+  "version": "1.0.0",
+  "title": "Contact",
+  "category": "trikoli-sections",
+  "icon": "email",
+  "description": "Contact info cards, a Google map and a working contact form (emails the site admin).",
+  "keywords": [ "contact", "form", "email", "map", "get in touch" ],
+  "textdomain": "trikoli",
+  "supports": { "anchor": true, "align": [ "wide", "full" ], "spacing": { "padding": true, "margin": true } },
+  "attributes": {
+    "email": { "type": "string", "default": "hello@trikoli.com" },
+    "phone": { "type": "string", "default": "(+1) 555 087 2200" },
+    "location": { "type": "string", "default": "Banani, Dhaka — Bangladesh" },
+    "mapQuery": { "type": "string", "default": "Banani, Dhaka, Bangladesh" },
+    "recipient": { "type": "string", "default": "" },
+    "showForm": { "type": "boolean", "default": true },
+    "showMap": { "type": "boolean", "default": true }
+  },
+  "render": "file:./render.php",
+  "editorScript": "file:./index.js"
+}
